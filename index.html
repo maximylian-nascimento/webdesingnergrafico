@@ -274,6 +274,38 @@ footer{position:relative;z-index:2;padding:38px 7%;text-align:center;color:#cfcf
 @media(max-width:980px){.mobile-menu-btn{display:grid;place-items:center}nav{display:none}.system-feature{grid-template-columns:1fr;padding:24px}.device-frame img{height:260px}}
 @media(max-width:560px){.brand img{width:104px}.mobile-menu-btn{width:44px;height:44px}.system-card img{height:210px}#adesivos .art-card img{max-height:280px}}
 
+
+/* CORREÇÃO DA GALERIA DE CARTAZES */
+#cartazes .gallery-strip{
+  align-items:start;
+}
+#cartazes .art-card{
+  height:430px;
+}
+#cartazes .art-card img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+@media(max-width:560px){
+  #cartazes .art-card{
+    height:390px;
+  }
+}
+
+
+/* NOVAS LOGOS */
+#logos .art-card{
+  height:340px;
+}
+#logos .art-card img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+
 </style>
 <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
@@ -431,7 +463,13 @@ footer{position:relative;z-index:2;padding:38px 7%;text-align:center;color:#cfcf
     <article class="art-card logo-art reveal"><img src="assets/agape.jpeg" alt="Logo Grupo de Dança Ágape"></article>
     <article class="art-card logo-art reveal"><img src="assets/logo-igreja.png" alt="Logo Igreja Renovada"></article>
       <article class="art-card logo-art reveal"><img src="assets/andreza-cakes-logo.png" alt="Logo Andreza Cakes"></article>
-</div>
+
+    <article class="art-card logo-art reveal"><img src="assets/festa-fish.png" alt="Festa Fish"></article>
+    <article class="art-card logo-art reveal"><img src="assets/prof-leonardo.png" alt="Prof Leonardo"></article>
+    <article class="art-card logo-art reveal"><img src="assets/fernanda-franca-logo.png" alt="Fernanda França"></article>
+    <article class="art-card logo-art reveal"><img src="assets/av-forros.png" alt="AV Forros"></article>
+
+  </div>
 </section>
 
 <section class="section" id="cartazes">
@@ -447,10 +485,12 @@ footer{position:relative;z-index:2;padding:38px 7%;text-align:center;color:#cfcf
     <article class="art-card poster-art reveal"><img src="assets/circulo-roxo.jpeg" alt="Cartaz"></article>
     <article class="art-card poster-art reveal"><img src="assets/circulo-preto.jpeg" alt="Cartaz"></article>
     <article class="art-card poster-art reveal"><img src="assets/circulo-dourado.jpeg" alt="Cartaz"></article>
+  
+    <article class="art-card poster-art reveal"><img src="assets/cartaz-dia-das-maes.jpeg" alt="Cartaz Dia das Mães"></article>
+    <article class="art-card poster-art reveal"><img src="assets/cartaz-fernanda-franca.jpeg" alt="Cartaz Fernanda França"></article>
+
   </div>
 </section>
-
-
 <section class="section" id="adesivos">
   <div class="section-head reveal">
     <div><div class="section-kicker">Embalagem e divulgação</div><h2>Adesivos</h2></div>
