@@ -264,6 +264,16 @@ footer{position:relative;z-index:2;padding:38px 7%;text-align:center;color:#cfcf
     object-fit:contain;
 }
 
+
+.mobile-menu-btn{display:none;width:48px;height:48px;border:1px solid rgba(255,196,0,.45);border-radius:16px;color:#050505;background:linear-gradient(135deg,var(--gold2),var(--gold),#a95f00);font-size:24px;font-weight:900;cursor:pointer;box-shadow:0 0 24px rgba(255,196,0,.28)}
+.mobile-menu-panel{position:fixed;top:0;right:-330px;width:min(320px,86vw);height:100vh;z-index:99998;padding:26px;background:linear-gradient(145deg,rgba(0,0,0,.96),rgba(38,25,3,.92));border-left:1px solid rgba(255,196,0,.35);box-shadow:-30px 0 80px rgba(0,0,0,.72);backdrop-filter:blur(20px);transition:.36s ease;display:flex;flex-direction:column;gap:10px}
+.mobile-menu-panel.open{right:0}.mobile-menu-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:18px;margin-bottom:8px;border-bottom:1px solid rgba(255,196,0,.22)}.mobile-menu-head strong{color:var(--gold);font-size:18px;letter-spacing:.12em;text-transform:uppercase}.mobile-menu-head button{width:42px;height:42px;border:1px solid rgba(255,196,0,.35);border-radius:14px;color:#fff;background:rgba(255,255,255,.06);font-size:28px;cursor:pointer}.mobile-menu-panel a{color:#fff;text-decoration:none;padding:15px 16px;border-radius:18px;font-size:13px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;border:1px solid rgba(255,196,0,.10);background:rgba(255,255,255,.035)}.mobile-menu-panel a:hover{color:#050505;background:linear-gradient(135deg,var(--gold2),var(--gold),#a95f00)}.mobile-menu-backdrop{position:fixed;inset:0;z-index:99997;background:rgba(0,0,0,.60);opacity:0;visibility:hidden;transition:.3s ease}.mobile-menu-backdrop.open{opacity:1;visibility:visible}
+.system-showcase{margin-bottom:28px}.system-feature{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:center;padding:34px;border:1px solid rgba(255,196,0,.30);border-radius:38px;background:radial-gradient(circle at 20% 15%,rgba(255,196,0,.20),transparent 34%),linear-gradient(145deg,rgba(0,0,0,.82),rgba(34,24,4,.68));box-shadow:0 0 58px rgba(255,196,0,.13);overflow:hidden}.system-badge{display:inline-flex;color:#050505;background:linear-gradient(135deg,var(--gold2),var(--gold),#a95f00);border-radius:999px;padding:10px 16px;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;margin-bottom:18px}.system-copy h3{color:var(--gold);font-size:clamp(30px,3.2vw,52px);line-height:.98;margin-bottom:18px;text-transform:uppercase}.system-copy p{color:#e3e3e3;line-height:1.72;font-size:17px}.system-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.system-tags span{padding:10px 14px;border-radius:999px;color:#fff;background:rgba(255,255,255,.06);border:1px solid rgba(255,196,0,.22);font-size:12px;font-weight:900;letter-spacing:.08em}.device-frame{padding:14px;border-radius:30px;background:linear-gradient(145deg,rgba(255,196,0,.24),rgba(255,255,255,.04));border:1px solid rgba(255,196,0,.30);box-shadow:0 22px 60px rgba(0,0,0,.55)}.device-frame img{width:100%;height:350px;object-fit:cover;object-position:top center;border-radius:22px;border:1px solid rgba(255,196,0,.20)}
+.system-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}.system-card{padding:18px;border:1px solid rgba(255,196,0,.28);border-radius:30px;background:linear-gradient(145deg,rgba(0,0,0,.78),rgba(38,25,3,.64));box-shadow:0 0 44px rgba(255,196,0,.10);transition:.32s}.system-card:hover{transform:translateY(-8px);border-color:rgba(255,196,0,.72);box-shadow:0 26px 80px rgba(255,196,0,.20)}.system-card img{width:100%;height:220px;object-fit:cover;object-position:top center;border-radius:22px;border:1px solid rgba(255,196,0,.22);margin-bottom:18px}.system-card h3{color:var(--gold);font-size:23px;margin-bottom:10px}.system-card p{color:#cfcfcf;line-height:1.58}
+#adesivos{padding-top:70px;padding-bottom:58px}#adesivos .gallery-strip{max-width:620px;margin:0 auto;grid-template-columns:1fr}#adesivos .art-card{height:auto;min-height:0;padding:22px}#adesivos .art-card img{height:auto;max-height:330px;object-fit:contain}
+@media(max-width:980px){.mobile-menu-btn{display:grid;place-items:center}nav{display:none}.system-feature{grid-template-columns:1fr;padding:24px}.device-frame img{height:260px}}
+@media(max-width:560px){.brand img{width:104px}.mobile-menu-btn{width:44px;height:44px}.system-card img{height:210px}#adesivos .art-card img{max-height:280px}}
+
 </style>
 <link rel="icon" type="image/png" href="assets/logo.png">
 </head>
@@ -297,13 +307,20 @@ footer{position:relative;z-index:2;padding:38px 7%;text-align:center;color:#cfcf
     <a href="#inicio">Início</a>
     <a href="#pastas">Portfólio</a>
     <a href="#sites">Sites</a>
+    <a href="#sistemas">Sistemas</a>
     <a href="#logos">Logos</a>
     <a href="#cartazes">Cartazes</a>
     <a href="#adesivos">Adesivos</a>
     <a href="#videos">Vídeos</a>
     <a href="#contato">Contato</a>
   </nav>
+  <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">☰</button>
 </header>
+<div class="mobile-menu-panel" id="mobileMenuPanel">
+  <div class="mobile-menu-head"><strong>Menu</strong><button id="mobileMenuClose" aria-label="Fechar menu">×</button></div>
+  <a href="#inicio">Início</a><a href="#pastas">Portfólio</a><a href="#sites">Sites</a><a href="#sistemas">Sistemas</a><a href="#logos">Logos</a><a href="#cartazes">Cartazes</a><a href="#adesivos">Adesivos</a><a href="#videos">Vídeos</a><a href="#contato">Contato</a>
+</div>
+<div class="mobile-menu-backdrop" id="mobileMenuBackdrop"></div>
 
 <main>
 <section class="hero" id="inicio">
@@ -329,6 +346,10 @@ footer{position:relative;z-index:2;padding:38px 7%;text-align:center;color:#cfcf
   </div>
 
   <div class="folder-grid">
+    <a class="folder-card reveal" href="#sistemas">
+      <div class="folder-icon">▦</div>
+      <div><h3>Sistemas</h3><p>Painéis administrativos, dashboards e áreas internas.</p></div>
+    </a>
     <a class="folder-card reveal" href="#logos">
       <div class="folder-icon">◆</div>
       <div><h3>Logos</h3><p>Identidades visuais, marcas e logos ministeriais.</p></div>
@@ -370,6 +391,33 @@ footer{position:relative;z-index:2;padding:38px 7%;text-align:center;color:#cfcf
       <img src="assets/igreja-site.png" alt="Print do site da Igreja">
       <a class="btn" href="https://igreja-alianca-c-cristo.github.io/" target="_blank">Visitar site</a>
     </article>
+  </div>
+</section>
+
+
+<section class="section" id="sistemas">
+  <div class="section-head reveal">
+    <div><div class="section-kicker">Painéis administrativos</div><h2>Sistemas</h2></div>
+    <p class="lead">Painéis inteligentes para empresas e igrejas, com área interna, controle financeiro, pedidos, relatórios, agenda e gerenciamento personalizado.</p>
+  </div>
+
+  <div class="system-showcase">
+    <article class="system-feature reveal">
+      <div class="system-copy">
+        <span class="system-badge">Projeto Web + Administrativo</span>
+        <h3>Soluções completas além do site</h3>
+        <p>Criação de áreas administrativas para o cliente gerenciar informações, acompanhar dados e organizar o atendimento em um painel visual, moderno e responsivo.</p>
+        <div class="system-tags"><span>Dashboard</span><span>Login</span><span>Relatórios</span><span>Controle</span></div>
+      </div>
+      <div class="device-frame"><img src="assets/sistema-tesouraria-painel.png" alt="Painel administrativo de tesouraria"></div>
+    </article>
+  </div>
+
+  <div class="system-grid">
+    <article class="system-card reveal"><img src="assets/sistema-tesouraria-login.png" alt="Login administrativo tesouraria"><h3>Login Seguro</h3><p>Área protegida para acesso interno, com tela de entrada simples, elegante e profissional.</p></article>
+    <article class="system-card reveal"><img src="assets/sistema-tesouraria-painel.png" alt="Painel financeiro igreja"><h3>Tesouraria Igreja</h3><p>Controle de entradas, saídas, saldo mensal, saldo geral, lançamentos e relatórios.</p></article>
+    <article class="system-card reveal"><img src="assets/sistema-andreza-painel.png" alt="Painel Andreza Cakes"><h3>Painel Andreza Cakes</h3><p>Dashboard para pedidos, clientes, produtos, agenda, financeiro, relatórios e configurações.</p></article>
+    <article class="system-card reveal"><img src="assets/sistema-andreza-login.png" alt="Login Andreza Cakes"><h3>Área Administrativa</h3><p>Tela de acesso personalizada com identidade visual da marca e experiência responsiva.</p></article>
   </div>
 </section>
 
@@ -462,6 +510,18 @@ window.addEventListener("load",()=>{
     if(intro) intro.classList.add("hide");
   }, 9200);
 });
+
+
+const mobileMenuBtn=document.getElementById("mobileMenuBtn");
+const mobileMenuPanel=document.getElementById("mobileMenuPanel");
+const mobileMenuBackdrop=document.getElementById("mobileMenuBackdrop");
+const mobileMenuClose=document.getElementById("mobileMenuClose");
+function openMobileMenu(){if(mobileMenuPanel) mobileMenuPanel.classList.add("open");if(mobileMenuBackdrop) mobileMenuBackdrop.classList.add("open")}
+function closeMobileMenu(){if(mobileMenuPanel) mobileMenuPanel.classList.remove("open");if(mobileMenuBackdrop) mobileMenuBackdrop.classList.remove("open")}
+if(mobileMenuBtn) mobileMenuBtn.addEventListener("click",openMobileMenu);
+if(mobileMenuClose) mobileMenuClose.addEventListener("click",closeMobileMenu);
+if(mobileMenuBackdrop) mobileMenuBackdrop.addEventListener("click",closeMobileMenu);
+document.querySelectorAll(".mobile-menu-panel a").forEach(a=>a.addEventListener("click",closeMobileMenu));
 
 </script>
 </body>
