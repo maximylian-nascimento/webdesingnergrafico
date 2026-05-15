@@ -1,0 +1,1 @@
+Envie para o GitHub: index.html + pasta assets. Não envie só o index.html, senão as imagens e vídeos não aparecem.
