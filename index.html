@@ -569,5 +569,16 @@ if(mobileMenuBackdrop) mobileMenuBackdrop.addEventListener("click",closeMobileMe
 document.querySelectorAll(".mobile-menu-panel a").forEach(a=>a.addEventListener("click",closeMobileMenu));
 
 </script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(function(registrations) {
+    for (const registration of registrations) {
+      registration.unregister();
+    }
+  });
+}
+</script>
+
 </body>
 </html>
