@@ -306,6 +306,32 @@ footer{position:relative;z-index:2;padding:38px 7%;text-align:center;color:#cfcf
   display:block;
 }
 
+
+/* AJUSTE NOVAS LOGOS E ADESIVOS */
+#logos .logo-art img,
+#adesivos .sticker-art img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+}
+#adesivos .gallery-strip{
+  max-width:1200px !important;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr)) !important;
+}
+#adesivos .sticker-art{
+  min-height:320px !important;
+  height:360px !important;
+}
+#adesivos .sticker-art img{
+  max-height:310px !important;
+}
+@media(max-width:560px){
+  #adesivos .sticker-art{
+    height:320px !important;
+  }
+}
+
 </style>
 <link rel="icon" type="image/png" href="assets/logo.png">
 
@@ -506,6 +532,11 @@ a:hover, button:hover {
       <img src="assets/softnasci_fundo.jpeg" alt="SoftNasci">
     </article>
 
+
+    <article class="art-card logo-art reveal">
+      <img src="assets/logo-melodia-divina.png" alt="Logo Criatório Melodia Divina">
+    </article>
+
 </div>
 </section>
 
@@ -535,7 +566,18 @@ a:hover, button:hover {
   </div>
   <div class="gallery-strip">
     <article class="art-card logo-art reveal"><img src="assets/pascoa-andreza.png" alt="Adesivo de Páscoa Andreza Cakes"></article>
-  </div>
+  
+    <article class="art-card sticker-art reveal">
+      <img src="assets/adesivo-feito-com-amor.png" alt="Adesivo Andreza Cakes Feito com Amor">
+    </article>
+    <article class="art-card sticker-art reveal">
+      <img src="assets/adesivo-mini-bolo.png" alt="Adesivo Mini Bolo no Pote">
+    </article>
+    <article class="art-card sticker-art reveal">
+      <img src="assets/adesivo-pudim.png" alt="Adesivo Delícia de Pudim">
+    </article>
+
+</div>
 </section>
 
 <section class="section" id="videos">
