@@ -308,6 +308,28 @@ footer{position:relative;z-index:2;padding:38px 7%;text-align:center;color:#cfcf
 
 </style>
 <link rel="icon" type="image/png" href="assets/logo.png">
+
+<style>
+html, body, a, button, input, textarea, select {
+  cursor: url('https://cur.cursors-4u.net/cursors/cur-9/cur817.cur'), auto !important;
+}
+
+a:hover, button:hover {
+  cursor: url('https://cur.cursors-4u.net/cursors/cur-9/cur817.cur'), pointer !important;
+}
+
+.cursor-gold {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 999999;
+  background: radial-gradient(circle, rgba(255,215,0,0.95) 0%, rgba(255,215,0,0.2) 60%, transparent 100%);
+  box-shadow: 0 0 15px gold, 0 0 30px rgba(255,215,0,0.7);
+}
+</style>
+
 </head>
 <body>
 
@@ -578,6 +600,20 @@ if ('serviceWorker' in navigator) {
     }
   });
 }
+</script>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const cursor = document.createElement('div');
+  cursor.classList.add('cursor-gold');
+  document.body.appendChild(cursor);
+
+  document.addEventListener('mousemove', function(e) {
+    cursor.style.left = (e.clientX - 10) + 'px';
+    cursor.style.top = (e.clientY - 10) + 'px';
+  });
+});
 </script>
 
 </body>
